@@ -24,13 +24,12 @@ Capture the waveform output and include the results in your report for verificat
 
 ## Verilog Code:
 ```
-// swap_three_numbers.v module swapping ( input wire [7:0] a_in, input wire [7:0] b_in, input wire [7:0] c_in, output reg [7:0] a_out, output reg [7:0] b_out, output reg [7:0] c_out );
-                        always @(*) begin a_out = b_in;
-                        // Swap: a = b b_out = c_in;
-                        // Swap: b = c c_out = a_in;
-                        // Swap: c = a;
-                        end
-                        endmodule
+// swap_three_numbers.vmodule swap_three_numbers( input [7:0] a, b, c,output reg [7:0] a_out, b_out, c_out );
+always @(*) begin a_out = b;
+b_out = c;
+c_out = a;
+end
+endmodule
 ```
 
 ![image](https://github.com/user-attachments/assets/a7168a99-c85e-4323-b3a8-dcb6e7cf59de)
